@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolHub Dashboard</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f7fb;color:#172033}
+.app{display:flex;min-height:100vh}
+.sidebar{width:245px;background:#111827;color:white;padding:24px 16px;position:fixed;inset:0 auto 0 0}
+.logo{font-size:23px;font-weight:800;margin:0 10px 35px}
+.logo span{color:#6366f1}
+.nav a{display:block;color:#b8c0cf;text-decoration:none;padding:13px 14px;border-radius:10px;margin:5px 0}
+.nav a.active,.nav a:hover{background:#6366f1;color:white}
+.logout{position:absolute;bottom:25px;left:16px;right:16px}
+.main{margin-left:245px;width:calc(100% - 245px);padding:28px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px}
+.top h1{font-size:28px}
+.user{background:white;border:1px solid #e5e7eb;padding:10px 15px;border-radius:12px}
+.hero{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:white;padding:30px;border-radius:18px;margin-bottom:25px}
+.hero h2{font-size:26px;margin-bottom:8px}.hero p{opacity:.9}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+.stat,.tool{background:white;border:1px solid #e8ebf2;border-radius:15px;padding:20px;box-shadow:0 5px 18px #11182708}
+.stat small{color:#6b7280}.stat strong{display:block;font-size:25px;margin-top:8px}
+.section-title{margin-bottom:15px}
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tool{cursor:pointer;transition:.2s}.tool:hover{transform:translateY(-3px);box-shadow:0 10px 25px #11182712}
+.icon{font-size:27px;margin-bottom:12px}.tool h3{font-size:17px;margin-bottom:6px}.tool p{font-size:13px;color:#6b7280;line-height:1.4}
+@media(max-width:900px){.stats,.tools{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.sidebar{width:72px;padding:20px 10px}.logo{font-size:0}.logo span{font-size:22px}.nav a{font-size:0;text-align:center}.nav a:first-letter{font-size:20px}.logout{font-size:0}.main{margin-left:72px;width:calc(100% - 72px);padding:18px}.stats,.tools{grid-template-columns:1fr 1fr}.top h1{font-size:22px}.hero{padding:22px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="logo">Tool<span>Hub</span></div>
+<nav class="nav">
+<a class="active" href="#">🏠 Dashboard</a>
+<a href="#">🛠️ Tools</a>
+<a href="#">📁 My Projects</a>
+<a href="#">⭐ Favorites</a>
+<a href="#">📊 Statistics</a>
+<a href="#">⚙️ Settings</a>
+</nav>
+<a class="nav logout" href="#">🚪 Logout</a>
+</aside>
+
+<main class="main">
+<div class="top">
+<h1>Dashboard</h1>
+<div class="user">👤 Welcome, User</div>
+</div>
+
+<section class="hero">
+<h2>Welcome to ToolHub 👋</h2>
+<p>Access your online tools, manage your projects and keep everything in one place.</p>
+</section>
+
+<section class="stats">
+<div class="stat"><small>Total Tools</small><strong>24</strong></div>
+<div class="stat"><small>Tools Used</small><strong>128</strong></div>
+<div class="stat"><small>Projects</small><strong>12</strong></div>
+<div class="stat"><small>Credits</small><strong>500</strong></div>
+</section>
+
+<h2 class="section-title">Popular Tools</h2>
+<section class="tools">
+<div class="tool"><div class="icon">🖼️</div><h3>Image Tools</h3><p>Resize, compress and convert images.</p></div>
+<div class="tool"><div class="icon">🎬</div><h3>Video Tools</h3><p>Process and convert your videos.</p></div>
+<div class="tool"><div class="icon">📄</div><h3>PDF Tools</h3><p>Merge, split and convert PDF files.</p></div>
+<div class="tool"><div class="icon">✍️</div><h3>Text Tools</h3><p>Format, generate and transform text.</p></div>
+<div class="tool"><div class="icon">🔗</div><h3>URL Tools</h3><p>Work with links and web addresses.</p></div>
+<div class="tool"><div class="icon">🔳</div><h3>QR Generator</h3><p>Create QR codes quickly.</p></div>
+<div class="tool"><div class="icon">🤖</div><h3>AI Tools</h3><p>Access AI-powered utilities.</p></div>
+<div class="tool"><div class="icon">🔄</div><h3>Converters</h3><p>Convert files between formats.</p></div>
+</section>
+</main>
+</div>
+</body>
+</html>
